@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ T<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baromètre du Bien-être - Collège Trois-Sapins</title>
+    <title>Baromètre des Trois-Sapins - Année 2025</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;700&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -532,7 +532,7 @@
     <div id="loginOverlay">
         <div id="loginBox">
             <div class="logo-icon">🎓</div>
-            <h2>Baromètre Trois-Sapins</h2>
+            <h2>Baromètre des Trois-Sapins</h2>
             <p>Accès par classe</p>
             
             <div class="input-group">
@@ -561,15 +561,15 @@
 
     <div class="container">
         <header>
-            <h1>🎓 Baromètre du Bien-être</h1>
-            <p>Collège Secondaire des Trois-Sapins - Année 2025-2026</p>
+            <h1>🎓 Baromètre des Trois-Sapins</h1>
+            <p>Année 2025-2026</p>
         </header>
 
         <div class="selector-section">
             <label for="classSelector">Sélectionnez une classe :</label>
             <div class="selector-grid">
                 <select id="classSelector">
-                    <option value="">-- Choisir une classe --</option>
+                    <option value="">-- Classes --</option>
                 </select>
             </div>
         </div>
@@ -584,49 +584,49 @@
 
             <div class="charts-grid">
                 <div class="chart-card">
-                    <h3>État de Bien-être Global 
+                    <h3>État de bien-être global 
                         <span class="info-icon" data-tooltip="Question : Comment te sens-tu généralement lorsque tu es au collège ?">ⓘ</span>
                     </h3>
                     <canvas id="wellbeingChart"></canvas>
                 </div>
 
                 <div class="chart-card">
-                    <h3>Sentiment de Sécurité 
+                    <h3>Sentiment de sécurité 
                         <span class="info-icon" data-tooltip="Question : Te sens-tu généralement en sécurité au collège ?">ⓘ</span>
                     </h3>
                     <canvas id="securityChart"></canvas>
                 </div>
 
                 <div class="chart-card">
-                    <h3>Santé Physique 
+                    <h3>Santé physique 
                         <span class="info-icon" data-tooltip="Question : Comment évalues-tu ta santé physique au cours des trois derniers mois ?">ⓘ</span>
                     </h3>
                     <canvas id="healthChart"></canvas>
                 </div>
 
                 <div class="chart-card chart-card-wide">
-                    <h3>Ressenti en Classe (Positif/Négatif) 
-                        <span class="info-icon" data-tooltip="Questions : Évalue à quel point les phrases suivantes reflètent ce que tu ressens à l'intérieur de ta classe">ⓘ</span>
+                    <h3>Ressenti en classe (positif/négatif) 
+                        <span class="info-icon" data-tooltip="Questions : Évalue à quel point les phrases suivantes reflètent ce que tu ressens à l'intérieur de ta classe. 5-6/6 = réponse positive, en vert et 1-2/6 = réponse négative, en rouge">ⓘ</span>
                     </h3>
                     <canvas id="classFeelingsChart"></canvas>
                 </div>
 
                 <div class="chart-card">
-                    <h3>Qualité des Relations (sur 10) 
-                        <span class="info-icon" data-tooltip="Évalue la qualité générale des relations : dans ta classe, dans le collège, avec les enseignants (1=catastrophiques, 10=excellentes)">ⓘ</span>
+                    <h3>Qualité des relations (sur 10) 
+                        <span class="info-icon" data-tooltip="Évalue la qualité générale des relations : dans ta classe, dans le collège, avec les enseignants (1=catastrophiques, 10=excellentes). Vous trouverez ici la moyenne de classe">ⓘ</span>
                     </h3>
                     <canvas id="relationshipsChart"></canvas>
                 </div>
 
                 <div class="chart-card">
-                    <h3>Sources de Stress Ressenties 
-                        <span class="info-icon" data-tooltip="Question : Évalue à quel point tu as ressenti en ce début d'année (échelle 1-6)">ⓘ</span>
+                    <h3>Sources de stress ressenties 
+                        <span class="info-icon" data-tooltip="Question : Évalue à quel point tu as ressenti en ce début d'année (échelle 1-6) Moyenne de classe">ⓘ</span>
                     </h3>
                     <canvas id="stressSourcesChart"></canvas>
                 </div>
 
                 <div class="chart-card">
-                    <h3>Temps d'Écran et Contrôle 
+                    <h3>Temps d'écran et contrôle des parents 
                         <span class="info-icon" data-tooltip="Questions sur l'utilisation du téléphone et le temps passé devant les écrans">ⓘ</span>
                     </h3>
                     <canvas id="screenChart"></canvas>
@@ -1027,7 +1027,7 @@
 
             // 4. Ressenti en Classe (Positif/Négatif combiné)
             currentCharts.classFeelings = createDivergentChart('classFeelingsChart',
-                ['Bien-être', 'Sécurité', 'Respect', 'Confiance', 'Camarades', 'Cadre'],
+                ['Bien-être', 'Sécurité', 'Respect', 'Confiance enseignants', 'Camarades sûrs', 'Cadre de travail'],
                 {
                     positive: [
                         classData['Se sent bien en classe'] * 100,
