@@ -875,13 +875,6 @@
                 });
             }
 
-            // Attaques personnelles
-            if (classData['% des élèves ayant subi du harcèlement'] > 0.3) {
-                insights.push({
-                    type: 'urgent',
-                    text: `<strong>Vigilance requise :</strong> ${formatPercent(classData['% des élèves ayant subi du harcèlement'])} des élèves déclarent avoir subi des attaques personnelles. Une intervention pourrait être nécessaire.`
-                });
-            }
 
             // Usage des écrans
             if (classData['% des élèves avec +6h/jour en semaine'] > 0.3) {
